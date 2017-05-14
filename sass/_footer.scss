@@ -1,0 +1,45 @@
+.footer {
+  background: $color_nav;
+  height: 75px;
+  overflow: hidden;
+  width: 100%;
+  .footer-container {
+    margin: 0 auto;
+    max-width: ($mobile_size - 20px);
+    padding: 0 10px;
+  }
+  .footer-logo {
+    img {
+      float: left;
+      height: 75px;
+      @media (max-width: $mobile_xsize){
+        height: 55px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .footer-right {
+    float: right;
+    .footer-translate {
+      background: rgba(255, 255, 255, 0.8);
+      margin: 24px 5px;
+      text-decoration: none;
+    }
+    .footer-license {
+      float: right;
+      img {
+        height: 30px;
+        margin-right: 10px;
+        margin-top: 22.5px;
+      }
+    }
+  }
+  @media (max-width: ($footer_special - 1)){
+    .footer-logo {
+      display: none;
+    }
+    .footer-right {
+      float: none;
+    }
+  }
+}

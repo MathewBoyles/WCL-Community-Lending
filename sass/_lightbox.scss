@@ -1,0 +1,36 @@
+.lightbox {
+  > .lightbox-backdrop {
+    background: #000;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $nav_zindex + 100;
+  }
+  > .lightbox-content {
+    > .lightbox-close {
+      color: #FFF;
+      cursor: pointer;
+      font-size: 50px;
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      z-index: $nav_zindex + 102;
+    }
+    > .lightbox-img {
+      box-shadow: #000 0 0 20px 3px;
+      left: 50%;
+      max-width: 90%;
+      position: fixed;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      top: 50%;
+      width: 300px;
+      z-index: $nav_zindex + 101;
+    }
+  }
+}

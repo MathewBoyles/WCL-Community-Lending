@@ -1,0 +1,210 @@
+.navbar {
+  background: $color_nav;
+  font-family: $font_header;
+  height: 75px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $nav_zindex;
+  .navbar-container {
+    height: 75px;
+    margin: 0 auto;
+    max-width: ($mobile_size - 20);
+    padding: 0 10px;
+  }
+  .navbar-logo {
+    img {
+      float: left;
+      height: 75px;
+      @media (max-width: ($mobile_xsize - 1)){
+        height: 55px;
+        margin-top: 10px;
+      }
+    }
+    @media (max-width: ($mobile_size - 1)){
+      float: none;
+    }
+  }
+  .navbar-nav {
+    display: inline-block;
+    font-size: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+      display: inline-block;
+      position: relative;
+      > a {
+        color: #FFF;
+        cursor: pointer;
+        display: block;
+        height: 75px;
+        line-height: 75px;
+        padding: 0 20px;
+      }
+      &.nav-dropdown {
+        > ul .navbar-search {
+          margin: 0;
+          width: 100%;
+          input {
+            width: calc(100% - 20px - 45px);
+          }
+        }
+        @media (min-width: $mobile_size){
+          > a:after {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px dashed;
+            content: "";
+            display: inline-block;
+            height: 0;
+            margin-left: 7px;
+            vertical-align: middle;
+            width: 0;
+          }
+        }
+      }
+      &.nav-button {
+        > a {
+          background: lighten($color_nav, 15);
+          height: 45px;
+          line-height: 45px;
+          margin-top: 15px;
+        }
+        &.nav-dropdown {
+          > ul {
+            margin-top: 15px;
+          }
+        }
+      }
+      > ul {
+        -ms-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        display: none;
+        font-size: 1em;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        width: 250px;
+        z-index: $nav_zindex+1;
+        li {
+          background: $color_cover;
+          a {
+            color: #FFF;
+            display: block;
+            padding: 6px 20px;
+            width: 210px;
+          }
+          &:nth-child(even){
+            background: lighten($color_cover, 3);
+          }
+          &:hover {
+            background: lighten($color_cover, 5);
+          }
+        }
+        @media (max-width: $mobile_size){
+          font-size: 1.1em;
+          left: 0;
+          position: fixed;
+          width: 100%;
+          > li {
+            background: $color_cover;
+            a {
+              padding: 15px 20px;
+              width: 100%;
+              width: calc(100% - 40px);
+            }
+          }
+        }
+      }
+      &:hover {
+        > a {
+          background: lighten($color_nav, 3);
+        }
+      }
+      &.active {
+        > a {
+          background: lighten($color_nav, 10);
+        }
+        > ul {
+          display: block;
+        }
+      }
+    }
+  }
+  .navbar-search {
+    float: left;
+    margin-right: 10px;
+    margin-top: 15px;
+    input, button {
+      background: lighten($color_nav, 15);
+      border: none;
+      color: #FFF;
+      display: inline-block;
+      float: left;
+      height: 45px;
+      outline: none;
+    }
+    input {
+      padding: 0 10px;
+      font-size: 1.1em;
+      width: 175px;
+      &::-ms-input-placeholder,
+      &:-moz-placeholder,
+      &::-moz-placeholder,
+      &::-webkit-input-placeholder,
+      &::input-placeholder {
+        color: lighten($color_nav, 35);
+      }
+    }
+    button {
+      cursor: pointer;
+      text-align: center;
+      width: 45px;
+      > .fa:nth-child(2) {
+        display: none;
+      }
+    }
+    &.active {
+      button {
+        background: lighten($color_nav, 20);
+        > .fa {
+          display: none;
+        }
+        > .fa:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+    button:hover {
+      background: lighten($color_nav, 10);
+    }
+  }
+  .navbar-right {
+    float: right;
+    .navbar-nav {
+      > li {
+        > ul {
+          right: 0;
+        }
+        > a > .fa {
+          &:nth-child(2){
+            display: none;
+          }
+        }
+        &.active {
+          > a > .fa {
+            &:nth-child(1){
+              display: none;
+            }
+            &:nth-child(2){
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

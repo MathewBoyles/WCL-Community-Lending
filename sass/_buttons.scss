@@ -1,0 +1,41 @@
+@mixin btnCustom($class, $background, $color) {
+  &.btn-#{$class}{
+    background: $background;
+    color: $color;
+    &:hover {
+      background: darken($background, 5);
+    }
+  }
+}
+.btn {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  outline: none;
+  padding: 10px 35px;
+  @include btnCustom('default',$color_b_default, $color_nav);
+  @include btnCustom('primary',$color_b_primary, $color_info);
+  @include btnCustom('danger',$color_b_danger, $color_info);
+  @include btnCustom('success',$color_b_success, $color_info);
+  &.btn-sm {
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+  &.btn-block {
+    width: 100%;
+  }
+  @media (max-width: ($mobile_size - 1)){
+    &.btn-sm-sm {
+      font-size: 0.9em;
+      padding: 5px 10px;
+    }
+  }
+  @media (max-width: ($mobile_sidebar - 1)){
+    &.btn-sm-xs {
+      font-size: 0.9em;
+      padding: 5px 10px;
+    }
+  }
+}

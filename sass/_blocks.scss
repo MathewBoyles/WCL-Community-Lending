@@ -1,0 +1,88 @@
+.search-results {
+  display: table;
+  width: 100%;
+  > .result {
+    background: $color_info;
+    margin-bottom: 10px;
+    > .result-wrap {
+      display: table-row;
+      > .result-side {
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+        width: 150px;
+        @media (max-width: ($mobile_sidebar - 1)){
+          float: none;
+        }
+        @media (max-width: ($mobile_xsize - 1)){
+          width: 100px;
+        }
+        > .result-image {
+          float: left;
+          > img {
+            margin: 15px 15px 5px 15px;
+            width: 120px;
+            @media (max-width: ($mobile_xsize - 1)){
+              margin: 10px 10px 5px 10px;
+              width: 80px;
+            }
+          }
+        }
+        > .result-stars {
+          > .cover-stars {
+            margin-bottom: 5px;
+          }
+        }
+        > .result-type {
+          margin-bottom: 10px;
+        }
+      }
+      > .result-main {
+        display: inline-block;
+        padding: 25px 20px 20px 20px;
+        vertical-align: top;
+        width: calc(100% - 150px - 40px);
+        @media (max-width: ($mobile_sidebar - 1)){
+          padding: 25px 20px 20px 0px;
+          width: calc(100% - 150px - 20px);
+        }
+        @media (max-width: ($mobile_xsize - 1)){
+          padding: 25px 20px 20px 0px;
+          width: calc(100% - 100px - 20px);
+        }
+        > .results-title,
+        > .results-author {
+          font-family: $font_header;
+          text-decoration: none;
+          > h2,
+          > p {
+            margin: 0;
+          }
+        }
+        > .results-info {
+          margin: 0;
+          > p {
+            color: $color_nav;
+            font-size: 0.9em;
+            margin: 3px 0;
+          }
+        }
+        > .results-more {
+          margin-top: 5px;
+          td, th {
+            border: none;
+            font-size: 0.8em;
+            padding: 0;
+            vertical-align: top;
+          }
+          tr {
+            margin-top: 5px;
+            td:nth-child(1) {
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

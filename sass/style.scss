@@ -1,0 +1,32 @@
+$color_nav: #4F4F4F;
+$color_link: #006F9C;
+$color_header: #006F9C;
+$color_star: #EBC109;
+$color_cover: #858585;
+$color_info: #EBEBEB;
+$color_sidebar: #fafafa;
+$color_b_default: #ffffff;
+$color_b_primary: #428bca;
+$color_b_danger: #D9534F;
+$color_b_success: #339C43;
+$nav_zindex: 100;
+$mobile_size: 1024px;
+$mobile_sidebar: 1024px;
+$mobile_xsize: 375px;
+$footer_special: 470px;
+$font_default: 'Arial', sans-serif;
+$font_header: 'Abel', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Lato');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import 'content';
+@import 'navbar';
+@import 'footer';
+
+@import 'blocks';
+@import 'tables';
+@import 'buttons';
+@import 'collapse';
+@import 'lightbox';
+@import 'modal';

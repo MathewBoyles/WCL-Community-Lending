@@ -1,0 +1,81 @@
+.collapse {
+  > .collapse-title {
+    background: $color_cover;
+    color: #FFF;
+    font-size: 1.1em;
+    padding: 20px 30px;
+    &:after {
+      content: "\f054";
+      float: right;
+      font: normal normal normal 14px/1 FontAwesome;
+      margin-top: 3.5px;
+      transition: transform 0.5s;
+    }
+  }
+  &.active {
+    > .collapse-title {
+      background: darken($color_cover, 10);
+    }
+  }
+  &:not(.collapse-sm):not(.collapse-xs) {
+    > .collapse-content {
+      background: $color_sidebar;
+    }
+    &:not(.active):not(.collapse-o) {
+      .collapse-content {
+        display: none;
+      }
+    }
+    .collapse-content {
+      &.content-main-content {
+        padding: 0 30px;
+      }
+    }
+  }
+  @media (max-width: ($mobile_sidebar - 1)){
+    &.collapse-xs {
+      > .collapse-content {
+        background: $color_sidebar;
+      }
+      &:not(.active):not(.collapse-o) {
+        .collapse-content {
+          display: none;
+        }
+      }
+      .collapse-content {
+        &.content-main-content {
+          padding: 30px;
+        }
+      }
+    }
+  }
+  @media (max-width: ($mobile_size - 1)){
+    &.collapse-sm {
+      > .collapse-content {
+        background: $color_sidebar;
+      }
+      &:not(.active):not(.collapse-o) {
+        .collapse-content {
+          display: none;
+        }
+      }
+      .collapse-content {
+        &.content-main-content {
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+  &.active {
+    > .collapse-title {
+      &:after {
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+    }
+    > .collapse-content {
+      display: inherit;
+    }
+  }
+}

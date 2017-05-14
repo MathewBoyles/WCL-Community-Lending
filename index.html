@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wellington City Libraries</title>
+  <link rel="stylesheet" href="./css/style.min.css" />
+  <link rel="manifest" href="./manifest.json" />
+</head>
+<body>
+  <div class="content">
+    <div class="content-boxed">
+      <div id="welcome">
+        <a href="#lb-start" class="js-scroll">
+          <img src="./img/welcome-ol.png" alt="Welcome to Wellington City Libraries" />
+        </a>
+      </div>
+      <div class="content-wrapper">
+        <div class="content-wrap">
+          <div class="content-main">
+            <div class="content-main-content">
+              <div class="collapse collapse-xs active">
+                <div class="collapse-title xs-show" data-translate="Whakaraparapa Pukapuka">Browse Books</div>
+                <div class="collapse-content content-main-content">
+                  <h2 class="xs-hide margin-top-20" data-translate="Whakaraparapa Pukapuka">Browse Books</h2>
+                  <div class="recommended" id="lb-start">
+                    <div class="recommended-items-wrap">
+                      <div class="recommended-items">
+                        <div class="recommended-item">
+                          <a href="./browse.html?t=books&c=fiction">
+                            <img src="img/genres/fiction.png" alt="Fiction" class="recommended-image recommended-image-ds" />
+                          </a>
+                        </div>
+                        <div class="recommended-item">
+                          <a href="./browse.html?t=books&c=non-fiction">
+                            <img src="img/genres/non-fiction.png" alt="Non-Fiction" class="recommended-image recommended-image-ds" />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="recommended-items">
+                        <div class="recommended-item">
+                          <a href="./browse.html?t=books&c=historic">
+                            <img src="img/genres/historic.png" alt="Historic" class="recommended-image recommended-image-ds" />
+                          </a>
+                        </div>
+                        <div class="recommended-item">
+                          <a href="./browse.html?t=books&c=kids">
+                            <img src="img/genres/kids.png" alt="Kids" class="recommended-image recommended-image-ds" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recommended-items-more">
+                      <a href="#">
+                        <h2>View more...</h2>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="xs-hide"><hr /></div>
+                </div>
+              </div>
+              <div class="collapse collapse-xs">
+                <div class="collapse-title xs-show" data-translate="Whakaraparapa Kōpae Ataata">Browse DVDs</div>
+                <div class="collapse-content content-main-content">
+                  <h2 class="xs-hide margin-top-20" data-translate="Whakaraparapa Kōpae Ataata">Browse DVDs</h2>
+                  <div class="recommended">
+                    <div class="recommended-items-wrap">
+                      <div class="recommended-items">
+                        <div class="recommended-item">
+                          <a href="./browse.html?t=dvds&c=documentaries">
+                            <img src="img/genres/documentaries.png" alt="Documentaries" class="recommended-image recommended-image-ds" />
+                          </a>
+                        </div>
+                        <div class="recommended-item">
+                          <a href="./browse.html?t=dvds&c=romance">
+                            <img src="img/genres/romance.png" alt="Romance" class="recommended-image recommended-image-ds" />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="recommended-items">
+                        <div class="recommended-item">
+                          <a href="./browse.html?t=dvds&c=kids">
+                            <img src="img/genres/kids.png" alt="Kids" class="recommended-image recommended-image-ds" />
+                          </a>
+                        </div>
+                        <div class="recommended-item">
+                          <a href="./browse.html?t=dvds&c=fantasy">
+                            <img src="img/genres/fantasy.png" alt="Fantasy" class="recommended-image recommended-image-ds" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recommended-items-more">
+                      <a href="#">
+                        <h2>View more...</h2>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-sidebar">
+            <div class="collapse collapse-xs">
+              <div class="collapse-title xs-show" data-translate="Whakataki">Search</div>
+              <div class="collapse-content">
+                <div class="content-sidebar-main">
+                  <div class="margin-top-10 sm-hide">&nbsp;</div>
+                  <h1 class="margin-top-0" data-translate="Whakataki">Search</h1>
+                  <form action="./search-results.html" class="refine-search">
+                    <div class="input-wrap">
+                      <label>
+                        <span data-translate="Kupu Matua">Keywords</span>:
+                        <input class="form-control" name="q">
+                      </label>
+                    </div>
+                    <div class="input-wrap margin-top-5">
+                      <button class="btn btn-success btn-sm btn-block" data-translate="Whakataki">Search</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="collapse collapse-xs">
+              <div class="collapse-title xs-show" data-translate="Whare Pukapuka Pārongo">Library Information</div>
+              <div class="collapse-content">
+                <div class="content-sidebar-main">
+                  <div class="margin-top-10 sm-hide">&nbsp;</div>
+                  <h1 class="margin-top-0" data-translate="Whare Pukapuka Pārongo">Library Information</h1>
+                  <form class="refine-search">
+                    <div class="input-wrap">
+                      <label>
+                        <span>How do I...</span>
+                        <select class="form-control" name="subject" id="DoSubject">
+                          <option value="http://www.wcl.govt.nz/carlweb/jsp/piplogin_page.jsp">Check my card</option>
+                          <option value="http://www.wcl.govt.nz/about/joining/">Join our libraries</option>
+                          <option value="http://www.wcl.govt.nz/about/services/reserve.html">Reserve a book</option>
+                          <option value="http://www.wcl.govt.nz/about/borrow/#extendedloans">Renew items</option>
+                          <option value="https://www.wcl.govt.nz/changeaddress/">Change my address</option>
+                          <option value="http://www.wcl.govt.nz/about/services/emailrequest.html">Receive notices by email</option>
+                          <option value="http://www.wcl.govt.nz/about/borrow/overdues1.html#payment">Pay my fines or fees</option>
+                          <option value="http://www.wcl.govt.nz/about/services/suggestion.html">Suggest a book</option>
+                          <option value="http://www.wcl.govt.nz/about/services/customer-charter.pdf">View the Customer Charter</option>
+                          <option value="http://www.wcl.govt.nz/about/services/enquiry_form.html">Ask a question</option>
+                          <option value="http://www.wcl.govt.nz/about/services/interloans.html">Request an interloan</option>
+                          <option value="http://www.wcl.govt.nz/about/news/vacancies.html">Find current vacancies</option>
+                          <option value="http://www.wcl.govt.nz/about/services/pal.html">Call PAL (our phone service)</option>
+                          <option value="http://www.wcl.govt.nz/about/services/courier.html">Get home delivery</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div class="input-wrap margin-top-5">
+                      <button type="button" class="btn btn-success btn-sm btn-block" id="DoSubject_button" data-translate="Ngawī">Go</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="collapse collapse-xs">
+              <div class="collapse-title xs-show">Find a Library</div>
+              <div class="collapse-content">
+                <div class="content-sidebar-main">
+                  <div class="margin-top-10 sm-hide">&nbsp;</div>
+                  <h1 class="margin-top-0">Find a Library</h1>
+                  <form action="./search-results.html" class="refine-search">
+                    <div class="input-wrap">
+                      <label>
+                        <select class="form-control" name="subject" id="DoLibrary">
+                          <option value="http://www.wcl.govt.nz/about/branches/central/">Central</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/brooklyn/whatson.html">Brooklyn</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/cummings/whatson.html">Cummings Park (Ngaio)</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/islandbay/whatson.html">Island Bay</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/johnsonville/whatson.html">Johnsonville</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/karori/whatson.html">Karori</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/khandallah/whatson.html">Khandallah</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/mervyn/whatson.html">Mervyn Kemp (Tawa)</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/miramar/whatson.html">Miramar</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/newtown/whatson.html">Newtown</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/ruthgotlieb/whatson.html">Ruth Gotlieb (Kilbirnie)</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/wadestown/whatson.html">Wadestown</option>
+                          <option value="http://www.wcl.govt.nz/about/branches/">Map of all branches</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div class="input-wrap margin-top-5">
+                      <button type="button" class="btn btn-success btn-sm btn-block" id="DoLibrary_button" data-translate="Ngawī">Go</button>
+                    </div>
+                    <a href="http://www.wcl.govt.nz/about/branches/opening-hours.html" target="_blank">
+                      <button type="button" class="btn btn-primary btn-block margin-top-10"><i class="fa fa-clock-o"></i> <span data-translate="Hāora Toro">Opening Hours</span></button>
+                    </a>
+                    <div class="margin-top-5 sm-hide">&nbsp;</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/main.min.js"></script>
+</body>
+</html>

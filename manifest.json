@@ -1,0 +1,24 @@
+{
+  "short_name": "WCL Community Lending",
+  "name": "Wellington City Libraries Community Lending",
+  "icons": [
+    {
+      "src": "img/meta/launcher-icon-2x.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "img/meta/launcher-icon-3x.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "img/meta/launcher-icon-4x.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/wcl/index.html?frommanifest=1",
+  "display": "standalone",
+  "orientation": "portrait"
+}
